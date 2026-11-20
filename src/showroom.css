@@ -1,0 +1,81 @@
+﻿.ts3d-section { background: #1e201d; color: #f4f0e8; padding: clamp(4rem,7vw,8rem) 0; scroll-margin-top: 4.5rem; }
+.ts3d-inner { width: min(90%, 1480px); margin: auto; }
+.ts3d-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 3rem; margin-bottom: 2rem; }
+.ts3d-kicker, .ts3d-model-label { font: 500 .77rem/1.25 'DM Sans', Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+.ts3d-kicker { color: #cfb38b; }
+.ts3d-heading h2 { font: normal clamp(2.6rem,5.3vw,5.9rem)/1.1 Georgia, serif; letter-spacing: -.055em; margin: .65rem 0 0; }
+.ts3d-heading p { line-height: 1.7; color: #d7d3c9; max-width: 340px; margin: 0 0 .25rem; font-size: 1rem; }
+.ts3d-studio { color: #f5f0e7; font-family: 'DM Sans', Arial, sans-serif; min-width: 0; }
+.ts3d-studio *, .ts3d-section * { box-sizing: border-box; }
+.ts3d-studio button { font-family: inherit; cursor: pointer; }
+.ts3d-studio button:focus-visible, .ts3d-studio input:focus-visible, .ts3d-canvas:focus-visible { outline: 3px solid #c89b62; outline-offset: 2px; }
+.ts3d-tabs { display: flex; flex-wrap: wrap; gap: .15rem .6rem; padding: 1rem 0; border-top: 1px solid #53554c; }
+.ts3d-tabs button { padding: .65rem .9rem; min-height: 44px; border: 1px solid transparent; font-size: .93rem; color: #dedbd3; background: none; transition: background .2s,color .2s; }
+.ts3d-tabs button:hover { background: #393b34; }
+.ts3d-tabs button[aria-pressed='true'] { color: #28241e; background: #e3d6c3; }
+.ts3d-layout { display: grid; grid-template-columns: minmax(0,1fr) clamp(250px,24vw,320px); border: 1px solid #484a42; background: #292b27; }
+.ts3d-main { position: relative; min-width: 0; min-height: 470px; overflow: hidden; }
+.ts3d-stage { position: absolute; inset: 0; isolation: isolate; background: #c6b9a7; overflow: hidden; }
+.ts3d-canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; cursor: grab; }
+.ts3d-canvas:active { cursor: grabbing; }
+.ts3d-model-label { position: absolute; top: 1rem; left: 1rem; z-index: 2; padding: .53rem .73rem; background: #fbf8f0ed; color: #454039; pointer-events: none; }
+.ts3d-hotspot { position: absolute; transform: translate(-50%,-50%); width: 36px; height: 36px; border: 0; display: grid; place-items: center; background: transparent; }
+.ts3d-hotspot[hidden] { display: none; }
+.ts3d-hotspot span { width: 24px; height: 24px; border: 1px solid #fff; border-radius: 50%; display: grid; place-items: center; font: 500 17px/1 Arial, sans-serif; color: #fff; background: #3e372fd4; box-shadow: 0 0 0 4px #fff4; transition: box-shadow .2s, background .2s; }
+.ts3d-hotspot:hover span, .ts3d-hotspot[aria-pressed='true'] span { background: #875d35; box-shadow: 0 0 0 6px #fff6; }
+.ts3d-camera { position: absolute; bottom: 1rem; right: 1rem; display: flex; align-items: stretch; background: #272823ec; color: #fff; }
+.ts3d-camera button { color: inherit; border: 0; background: none; min-height: 42px; min-width: 42px; padding: .55rem; font-size: 1.25rem; }
+.ts3d-camera button:hover { background: #514c41; }
+.ts3d-camera button.ts3d-reset { font-size: .83rem; border-left: 1px solid #77766b; padding: .55rem .8rem; }
+.ts3d-inspector { padding: clamp(1.25rem,2.3vw,2.2rem); align-self: start; }
+.ts3d-inspector h3 { font: normal clamp(1.6rem,2.4vw,2.55rem)/1.15 Georgia,serif; letter-spacing: -.035em; color: #fbf6ee; margin: 0 0 .7rem; }
+.ts3d-inspector p { margin: 0; font: 400 .94rem/1.55 'DM Sans',Arial,sans-serif; color: #d6d4cb; }
+.ts3d-config, .ts3d-actions, .ts3d-build { border-top: 1px solid #5c5b52; margin-top: 1.3rem; padding-top: .95rem; }
+.ts3d-config h4, .ts3d-build label { font: 500 .9rem/1.4 'DM Sans',Arial,sans-serif; display: flex; justify-content: space-between; align-items: center; gap: .7rem; margin: 0; color: #f5f0e7; text-transform: none; letter-spacing: normal; }
+.ts3d-config h4 span, .ts3d-build output { color: #c8b79e; font-size: .84rem; }
+.ts3d-swatches { display: flex; gap: .4rem; margin: .45rem 0 0; }
+.ts3d-swatches button { width: 42px; height: 40px; padding: 4px; border: 1px solid transparent; border-radius: 0; background: none; }
+.ts3d-swatches button::after { content: ''; display: block; height: 100%; background: repeating-linear-gradient(97deg,transparent 0 3px,#21130822 4px,transparent 5px 8px),var(--sample); }
+.ts3d-swatches button[aria-pressed='true'] { border-color: #e5d6bc; }
+.ts3d-actions { display: grid; gap: 1px; padding-top: .4rem; }
+.ts3d-actions button { display: flex; align-items: center; justify-content: space-between; min-height: 42px; border: 0; padding: .5rem 0; color: #f1eee6; font-size: .94rem; background: none; }
+.ts3d-switch { position: relative; width: 30px; height: 17px; background: #54554f; border: 1px solid #8b8b80; border-radius: 20px; }
+.ts3d-switch::after { position: absolute; content: ''; left: 2px; top: 2px; width: 11px; height: 11px; border-radius: 50%; background: #e9e7de; transition: transform .25s; }
+.ts3d-actions button[aria-pressed='true'] .ts3d-switch { background: #997349; }
+.ts3d-actions button[aria-pressed='true'] .ts3d-switch::after { transform: translateX(13px); }
+.ts3d-inspector .ts3d-tip { color: #e2d0b3; font-size: .85rem; margin-top: .55rem; }
+.ts3d-build { margin-top: .55rem; }
+.ts3d-build input { display: block; width: 100%; height: 22px; margin: .5rem 0; accent-color: #c5a577; cursor: pointer; }
+.ts3d-build button { margin: 0; padding: .3rem 0; background: none; border: 0; color: #e1d0b7; text-decoration: underline; text-underline-offset: .2em; font-size: .87rem; }
+.ts3d-fallback { position: absolute; inset: 0; display: grid; place-items: end center; padding: 1rem; color: white; }
+.ts3d-fallback img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.ts3d-fallback span { background: #2f2b24ee; padding: .8rem; max-width: 36rem; font-size: .9rem; }
+.ts3d-hero { width: 100%; }
+@media(max-width: 800px) {
+  .ts3d-layout { grid-template-columns: 1fr; }
+  .ts3d-main { min-height: 0; height: clamp(265px,57vw,440px); }
+  .ts3d-inspector { padding: 1.4rem; }
+  .ts3d-heading { display: block; }
+  .ts3d-heading p { margin-top: 1rem; max-width: none; }
+  .ts3d-tabs { gap: .1rem; }
+  .ts3d-tabs button { padding: .45rem .67rem; }
+  .ts3d-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .ts3d-actions button { gap: .4rem; }
+  .ts3d-swatches { margin: 0; }
+  .ts3d-config { display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+  .ts3d-config h4 { flex-wrap: wrap; justify-content: start; }
+  .ts3d-build { margin-top: .7rem; }
+}
+@media(prefers-reduced-motion:reduce) { .ts3d-studio *, .ts3d-studio *::after { transition-duration: 0s !important; } }
+.ts3d-follow { min-height: 180vh; min-height: 180svh; }
+.ts3d-follow .ts3d-layout { position: sticky; top: 5rem; grid-template-columns: minmax(0,1fr); }
+.ts3d-follow .ts3d-inspector { display: none; }
+.ts3d-follow .ts3d-main { height: min(74vh,780px); height: min(74svh,780px); min-height: 260px; }
+.ts3d-exit { position: absolute; top: 1rem; right: 1rem; z-index: 3; border: 0; padding: .55rem .7rem; background: #282922ee; color: #fff; font-size: .86rem; }
+@media(max-width:480px) {
+  .ts3d-follow .ts3d-main { height: min(64svh,470px); }
+  .ts3d-follow .ts3d-model-label { left: .6rem; }
+  .ts3d-exit { right: .6rem; }
+}
+.ts3d-follow .ts3d-canvas { pointer-events: none; }
+.ts3d-follow .ts3d-camera, .ts3d-follow .ts3d-hotspot { display: none; }
